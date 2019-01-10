@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Impact View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImpactApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImpactViewController" customModule="ImpactApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,6 +32,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9N-p7-owO">
                                 <rect key="frame" x="0.0" y="237" width="375" height="30"/>
                                 <state key="normal" title="Animate to Impact Area"/>
+                                <connections>
+                                    <action selector="flyOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UM0-pG-kVT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,6 +61,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MapView" destination="hDl-K6-WwL" id="nlW-jV-qyM"/>
+                        <outlet property="animate" destination="b9N-p7-owO" id="JxK-wp-ZVc"/>
+                        <outlet property="image" destination="cIj-gb-3ML" id="G3V-u7-Iya"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
